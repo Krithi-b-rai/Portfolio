@@ -1,0 +1,289 @@
+ /* Reset some default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Default font size for larger screens */
+body {
+  font-size: 1.1rem;
+}
+
+/* Make headings a bit bigger */
+h2, h3 {
+  font-size: 2rem;
+}
+
+/* Font size for regular text */
+p {
+  font-size: 1.1rem;
+}
+
+/* Responsive font sizes for smaller screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem; /* Slightly smaller text on mobiles */
+  }
+
+  h2, h3 {
+    font-size: 1.5rem; /* Reduce heading size slightly */
+  }
+
+  p {
+    font-size: 1rem; /* Paragraphs readable but not oversized */
+  }
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfcfe;
+  color: #1c1c1c;
+}
+
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  background-color: #f5f5f5; /* soft off-white background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* very light bottom shadow */
+}
+
+
+
+/* Left - Brand Name */
+.brand-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1c1c1c;
+}
+
+.brand-name .highlight {
+  color: #8000ff;
+}
+
+/* Right - Nav Links */
+.navbar-right {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #2f2f2f;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #8000ff;
+}
+
+.nav-link.active {
+  color: #8000ff;
+}
+
+/*About*/
+.about-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff; /* Pure white, same as Skills and Education cards */
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.section-title::after {
+  content: ".";
+  color: #8000ff; /* Purple dot */
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+.about-content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(128, 0, 255, 0.2); /* Soft purple glow on hover */
+}
+
+
+.about-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
+
+/*Projects*/
+
+.projects-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.section-title .dot {
+  color: #8a2be2;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  height: 200px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.placeholder-pink {
+  background: linear-gradient(135deg, #ffafcc, #ffe6f0);
+}
+
+.placeholder-green {
+  background: linear-gradient(135deg, #b9fbc0, #d2fba4);
+}
+
+.placeholder-blue {
+  background: linear-gradient(135deg, #a0c4ff, #cde7ff);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.project-card .arrow {
+  font-size: 1.2rem;
+  color: #8a2be2;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/*Education*/
+.education-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.section-title::after {
+  content: ".";
+  color: #8000ff;
+}
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+.education-item:hover {
+  transform: translateY(-8px); /* Lifts the card upward */
+  box-shadow: 0 8px 16px rgba(128, 0, 255, 0.2); /* Adds a soft purple shadow */
+}
+
+
+.education-degree {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #8000ff; /* Purple color for degree headings */
+}
+
+.education-institution {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.education-year {
+  font-weight: 500;
+}
+
+.education-detail {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.footer-social-icons a {
+  transition: all 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+  transform: translateY(-5px);
+  color: #8000ff; /* keeping your theme color on hover */
+}
+
+.about-section {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5; /* Same as navbar */
+}
+
+.projects-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5; /* Same as navbar */
+}
