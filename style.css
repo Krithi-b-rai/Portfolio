@@ -1,4 +1,4 @@
- /* Reset some default spacing */
+  /* Reset some default spacing */
 * {
   margin: 0;
   padding: 0;
@@ -179,7 +179,7 @@ body {
   background-position: center;
 }
 
-.placeholder-pink {
+/*.placeholder-pink {
   background: linear-gradient(135deg, #ffafcc, #ffe6f0);
 }
 
@@ -189,7 +189,7 @@ body {
 
 .placeholder-blue {
   background: linear-gradient(135deg, #a0c4ff, #cde7ff);
-}
+}*/
 
 .project-card h3 {
   font-size: 1.5rem;
@@ -287,3 +287,81 @@ body {
   padding: 60px 20px;
   background-color: #f5f5f5; /* Same as navbar */
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.project-card {
+  width: 340px; /* Made wider */
+  height: 370px; /* Slightly taller */
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px; /* Bigger image */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.project-card h3 {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*updated project cards*/
+.project-card:hover {
+  transform: translateY(-5px);
+} 
+
+
+.project-card {
+  width: 340px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Important: crop inside contents neatly */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Taller for better image visibility */
+  object-fit: cover; /* Ensures image covers space perfectly */
+}
+
+.project-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 12px 0 8px;
+  color: #111;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
