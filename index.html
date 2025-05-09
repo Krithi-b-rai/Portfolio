@@ -33,8 +33,51 @@
     }
   </script>
 
+<script>
+  document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const form = e.target;
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    try {
+      const response = await fetch("http://localhost:8080/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        document.getElementById("response-msg").classList.remove("hidden");
+        form.reset();
+      } else {
+        alert("Something went wrong!");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Server not responding.");
+    }
+  });
+
+  await fetch("http://localhost:8080/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+});
+
+</script>
+
+
+
   <!--navigation bar-->
   <nav class="navbar sticky top-0 z-50 bg-[#f5f5f5]">
+
     <div class="navbar-left">
       <span class="brand-name">Krithi <span class="highlight">B Rai</span></span>
     </div>
@@ -83,7 +126,7 @@
   <div class="section-container">
     <h2 class="section-title">About.</h2>
     <div class="about-content">
-       <p class="about-text">
+      <p class="about-text">
         Passionate Frontend Developer with experience in HTML, CSS, JavaScript, and modern UI/UX design principles. 
         Adept at developing intuitive and user-friendly applications, with a keen interest in 
         women’s health tech.
@@ -196,6 +239,21 @@
       </div>
     </div>
   </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="bg-white py-16 px-6 lg:px-24">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Contact Me</h2>
+    <form id="contact-form" class="space-y-6">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded" />
+      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded"></textarea>
+      <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded hover:bg-purple-700">Send</button>
+    </form>
+    <p id="response-msg" class="text-green-600 mt-4 hidden">Message sent successfully!</p>
+  </div>
+</section>
+
   
   
 <!-- Footer Section -->
